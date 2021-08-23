@@ -1,5 +1,5 @@
 class Pila:
-    def __init__(self,tamanio=1):
+    def __init__(self,tamanio=3):
         self.lista=[]
         self.size=tamanio
         self.top=0
@@ -34,14 +34,13 @@ class Pila:
             return False
     
     
-    
-pila1 = Pila(3)
-pila1.push(8)
-pila1.push(10)
-pila1.push(12)
-pila1.show()
-print(pila1.longitud())
-#pila1.push(4)
+# pila1 = Pila()
+# pila1.push()
+# pila1.push()
+# pila1.push()
+# pila1.show()
+# print(pila1.longitud())
+#pila1.push()
 
 # dato = pila1.pop()
 # if dato: print("el dato eliminado es: {}".format(dato))
