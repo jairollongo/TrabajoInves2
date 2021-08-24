@@ -23,11 +23,10 @@ while opc != "4":
     lista1 = Lista(tam)
     cola1 = Cola(tam)
     if opc == "1":
-        opc1 =""
-        # cada vez que ingresaba el menu lista queria ingresar nuevos datos
+        opc1 = ""
         while opc1 != "8":
             os.system("cls") 
-            men1 = Menu("Menú Listas",["1) Append","2) Obtener","3) ObtenerEliminando","4) Buscar","5) Insertar","6) Eliminar","7) Mostrar","8) Salir"])
+            men1 = Menu("Menú Listas",["1) Append","2) Obtener","3) ObtenerEliminasdo","4) Buscar","5) Insertar","6) Eliminar","7) Mostrar","8) Salir"])
             opc1 = men1.menu()
             if opc1 == "1":
                 os.system("cls")
@@ -46,7 +45,7 @@ while opc != "4":
                 os.system("cls")
                 print("Obtener el valor eliminado junto a la lista")
                 pos = int(input("Ingrese posicion del dato: "))
-                lista1.obtenerEliminando(pos)
+                lista1.obtenerEliminado(pos)
                 input("Presione una tecla para continuar")
             elif opc1== "4":
                 os.system("cls")
@@ -62,8 +61,8 @@ while opc != "4":
                 input("Presione una tecla para continuar")
             elif opc1 == "6":
                 os.system("cls")
-                print("Eliminar dato de la lista si existe en la lista")
-                dato = int(input("Ingres dato a buscar para eliminarlo: "))
+                print("Eliminar el dato de la lista si llega ha exitir en la lista")
+                dato = int(input("Ingrese el dato a buscar para eliminarlo: "))
                 print(lista1.eliminar(dato))
                 input("Presione una tecla para continuar")
             elif opc1 == "7":
@@ -75,7 +74,7 @@ while opc != "4":
                 print("De vuelta al Menu Principal")
                 input("Presione una tecla para continuar")
             else:
-                print("Opción no valida")
+                print("OPCION NO VALIDA")
                 input("Presione una tecla para continuar")
     elif opc == "2":
         opc2 = ""
@@ -100,7 +99,7 @@ while opc != "4":
                         print("El elemento eliminado es: {}".format(cola1.quitar()))
                     input("Presione una tecla para continuar")
                 else:
-                    print("Error numero mayor al tamaño de la cola")
+                    print("Error, el numero es mayor al tamaño de la cola")
                     input("Presione una tecla para continuar")
             elif opc2 == "3":
                 os.system("cls")
@@ -114,8 +113,7 @@ while opc != "4":
                 input("Presione una tecla para continuar")
             elif opc2 == "5":
                 os.system("cls")
-                print("Verifique si la Cola está vacia")
-                print("False para la cola llena o tiene elementos y True para la pila vacia")
+                print("Verifique si la Cola está vacia ")
                 print("{}".format(cola1.empty()))
                 input("Presione una tecla para continuar")
             elif opc2 == "6":
@@ -135,12 +133,8 @@ while opc != "4":
                 os.system("cls")
                 print("Ingreso de un numero a la Pila")
                 for i in range(tam):
-                    while True:
-                        try:
-                            dato = int(input("Ingrese el numero que desea ingresar a la pila: "))
-                            break
-                        except ValueError:
-                            print("Dato no válido, por favor ingrese un número")
+                    dato = int(input("Ingrese el numero que desea ingresar a la pila: "))
+                    print("Dato no válido, por favor ingrese un número")
                     pila1.push(dato)
                     print("Dato ingresado")
                 input("Presione una tecla para continuar")
@@ -173,12 +167,12 @@ while opc != "4":
             elif opc1 =="5":
                 os.system("cls")
                 print("Verificar si la Pila está vacia")
-                print("False para pila llena y True para pila vacia---")
+                print("False para pila llena y True para pila vacia")
                 print("{}".format(pila1.empty()))
                 input("Presione una tecla para continuar")
             elif opc1 =="6":
                 print("De vuelta al Menu Principal")
-                input("Presione una tecla para continuar---")
+                input("Presione una tecla para continuar")
             else:
                 print("Opción no valida")
                 input("Presione una tecla para continuar") 
